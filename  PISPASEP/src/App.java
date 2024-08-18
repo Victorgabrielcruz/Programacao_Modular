@@ -11,15 +11,13 @@ public class App {
         int tamanho = 10;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Digite o número PIS/PASEP (sem o dígito verificador):");
-        String input = scanner.nextLine().replaceAll(" ", "");;
+        String input = scanner.nextLine().replaceAll(" ", "");
+        scanner.close();
         VerificaComprimeto(input, tamanho);
         
         for (int i = 0; i < input.length(); i++) {
             pisPaes[i] = Character.getNumericValue(input.charAt(i));
-        }
-        
-        scanner.close();
-        
+        }        
         return pisPaes;
     }
 
